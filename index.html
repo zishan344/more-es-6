@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" type="text" />
+    <button id="namta">get number</button>
+    <div id="namata-text"></div>
+    <script>
+      function getNumber(number) {
+        const output = [];
+
+        for (let i = 1; i <= 10; i++) {
+          output.push(number + "x" + i + "=" + i * number);
+        }
+        return output;
+      }
+
+      document.getElementById("namta").addEventListener("click", function () {
+        const input = document.getElementById("input");
+        const inputText = parseInt(input.value);
+        const div = document.getElementById("namata-text");
+
+        const inputNmata = getNumber(inputText);
+        for (const number of inputNmata) {
+          const p = document.createElement("p");
+          p.innerText = number;
+          div.appendChild(p);
+        }
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
