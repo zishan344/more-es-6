@@ -17,5 +17,5 @@ const marouf = new Support("marouf", "Bangladesh", "ctg");
 const aamir = new Support("amir khan", "india", "mombai");
 // aamir.startSessions();
 // marouf.startSessions();
-console.log(marouf);
+console.log(marouf.startSessions());
 console.log(aamir);
